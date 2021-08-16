@@ -57,16 +57,29 @@ new_dict = {}
 with open(full_path) as file:
      file_input = yaml.load(file, Loader=yaml.FullLoader)
      print(file_input)
+     
+        
+            
      for key, value in file_input.items():
+         if(operation == operation_dictionary[2]):
+             value = value[2:-1]
          command = command_init+ " " + "string " + operation + " " + algorithm + " " + mode +" " + index + " " + str(value)
          print(command)
-         a = os.popen(command)                                                                                                                                       
-         encrypted = a.read().strip('\n')                                                                                                                                    
-         print(encrypted)
-         new_dict[key] = encrypted
+         a = os.popen(command)  
+        
+         if(operation == operation_dictionary[1]): 
+            encrypted = a.read().strip('\n')                                                                                                                                     
+            encrypted = '![' + encrypted + ']'                                                                                                                                   
+            print(encrypted)
+            new_dict[key] = encrypted
+         elif(operation == operation_dictionary[2]):
+             decrypted = a.read().strip('\n')
+             print(decrypted)
+             new_dict[key] = decrypted
 print(new_dict)
-new_path = os.path.join(file_path, 'encrypted_'+string)
-with open(new_path, 'w') as file:  
-     document = yaml.dump(new_dict, file)
-                                             
+if(operation == operation_dictionary[operation_index]):
+    new_path = os.path.join(file_path, operation+'_'+string.strip('encrypted'))
+    with open(new_path, 'w') as file:  
+        document = yaml.dump(new_dict, file)
+                                         
                                                                                                 

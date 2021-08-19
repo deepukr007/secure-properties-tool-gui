@@ -1,0 +1,43 @@
+.card__file {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+#file {
+  // color: $color-primary;
+}
+.card__file-off {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.file {
+  display: none;
+}
+
+#file {
+  // width: 85%;
+}
+
+#key {
+  // width: 85%;
+}
+
+.heading2:target .file {
+  visibility: visible;
+  opacity: 1;
+}
+
+.file:checked .card__file {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card__file-on {
+  visibility: visible;
+  opacity: 1;
+  // display: inline-block;
+}

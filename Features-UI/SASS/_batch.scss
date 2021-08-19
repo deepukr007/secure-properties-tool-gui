@@ -1,0 +1,21 @@
+.card__batch {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.card__batch-on {
+  visibility: visible;
+  opacity: 1;
+  display: initial;
+}
+
+.batch {
+  display: none;
+}
+
+.batch:checked .card__batch {
+  visibility: visible;
+  opacity: 1;
+}

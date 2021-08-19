@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="HTML CSS SCSS">
+  <title>Design</title>
+  <!-- Bootstrap 5  -->
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
+
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="./SASS/main.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <script src="./script.js"></script>
+  <section>
+    <div class="container">
+      <div class="card">
+        <nav class="card__nav">
+          <ul class="nav__item">
+            <li class="nav__items">
+              <h2 class="card__heading">
+                <a href="#" class="card__heading--link heading1">
+                  <input type="radio" name="nav" id="nav__string" onmouseover="stringClick()" onclick="stringClick()"
+                    class="string radio" checked>
+                  <label for="nav__string" class="nav__label string__label">
+                    String
+                  </label>
+                </a>
+
+
+              </h2>
+            </li>
+            <li class="nav__items">
+              <h2 class="card__heading">
+                <a href="#" class="card__heading--link heading2">
+                  <input type="radio" name="nav" id="nav__label" onmouseover="fileClick()" onclick="fileClick()"
+                    class="file radio">
+                  <label for="nav__label" class="nav__label string__label">
+                    File
+                  </label>
+
+                </a>
+              </h2>
+            </li>
+            <li class="nav__items">
+              <h2 class="card__heading">
+                <a href="#" class="card__heading--link heading3">
+                  <input type="radio" name="nav" id="nav__batch" onmouseover="batchClick()" onclick="batchClick()"
+                    class="batch radio">
+                  <label for="nav__batch" class="nav__label string__label">
+                    Batch
+                  </label>
+                </a>
+              </h2>
+            </li>
+          </ul>
+          <!-- <div class="card__nav">
+         
+          
+          
+        </div> -->
+        </nav>
+
+
+
+        <!-- String -->
+        <div class="card__form card__string">
+          <div class="card__rel">
+            <form action="#" id="form">
+              <div class="card__element">
+                <label for="value">
+                  <h3 class="card__sub--heading">
+                    Value
+                  </h3>
+                </label>
+                <input type="text" class="card__input" name="value" id="value" autocomplete="off" required>
+              </div>
+              <div class="card__elements">
+                <label for="key">
+                  <h3 class="card__sub--heading">
+                    Key
+                  </h3>
+                </label>
+                <input type="text" class="card__input" name="key" id="key" autocomplete="off" required>
+              </div>
+              <div class="card__algo">
+                <div for="card__algo--main">
+                  <h3 class="card__sub--heading">
+                    Algorithm
+                  </h3>
+                </div>
+                <div class="card__algo--inputs">
+                  <div class="inputs">
+                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="aes" checked>
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="aes" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      AES
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="blowfish">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="blowfish" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      Blowfish
+                    </label>
+                  </div>
+
+                  <div class="inputs">
+                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="des">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="des" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      DES
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="desede">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="desede" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      DESede
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="rc2">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="rc2" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      RC2
+                    </label>
+                  </div>
+
+                  <div class="inputs">
+                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="rca">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="rca" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      RCA
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="card__mode">
+                <div for="card__mode--main">
+                  <h3 class="card__sub--heading">
+                    Mode
+                  </h3>
+                </div>
+                <div class="card__mode--inputs">
+                  <div class="mode__inputs">
+                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="cbc" checked>
+                    <label for="cbc" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      CBC
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="cfb">
+                    <label for="cfb" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      CFB
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="ecb">
+                    <label for="ecb" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      ECB
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="ofb">
+                    <label for="ofb" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      OFB
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+              <div class="btn__main">
+                <div class="card__btn">
+                  <button class="btn btn-animate" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+
+
+
+        <!-- File -->
+        <div class="card__form card__file" id="file">
+          <div class="card__rel">
+            <form action="#" id="form">
+              <div class="card__element">
+                <label for="value">
+                  <h3 class="card__sub--heading">
+                    File
+                  </h3>
+                </label>
+                <input type="file" class="card__input" name="file" id="file" autocomplete="off" required>
+              </div>
+              <div class="card__elements">
+                <label for="key">
+                  <h3 class="card__sub--heading">
+                    Key
+                  </h3>
+                </label>
+                <input type="text" class="card__input" name="key" id="keyFile" autocomplete="off" required>
+              </div>
+              <div class="card__algo">
+                <div for="card__algo--main">
+                  <h3 class="card__sub--heading">
+                    Algorithm
+                  </h3>
+                </div>
+                <div class="card__algo--inputs">
+                  <div class="inputs">
+                    <input type="radio" name="file" class="card__algo--radio radio" id="aesFile" checked>
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="aesFile" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      AES
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="file" class="card__algo--radio radio" id="blowfishFile">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="blowfishFile" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      Blowfish
+                    </label>
+                  </div>
+
+                  <div class="inputs">
+                    <input type="radio" name="file" class="card__algo--radio radio" id="desFile">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="desFile" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      DES
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="file" class="card__algo--radio radio" id="desedeFile">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="desedeFile" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      DESede
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="file" class="card__algo--radio radio" id="rc2File">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="rc2File" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      RC2
+                    </label>
+                  </div>
+
+                  <div class="inputs">
+                    <input type="radio" name="file" class="card__algo--radio radio" id="rcaFile">
+                    <!-- <span class="algo__radio--span">
+              </span> -->
+                    <label for="rcaFile" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      RCA
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="card__mode">
+                <div for="card__mode--main">
+                  <h3 class="card__sub--heading">
+                    Mode
+                  </h3>
+                </div>
+                <div class="card__mode--inputs">
+                  <div class="mode__inputs">
+                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="cbcFile" checked>
+                    <label for="cbcFile" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      CBC
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="cfbFile">
+                    <label for="cfbFile" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      CFB
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="ecbFile">
+                    <label for="ecbFile" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      ECB
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="ofbFile">
+                    <label for="ofbFile" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      OFB
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+              <div class="btn__main">
+                <div class="card__btn">
+                  <button class="btn btn-animate" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+
+
+
+
+
+        <!-- Batch -->
+        <div class="card__form card__batch" id="batch">
+          <div class="card__rel">
+            <form action="#" id="form">
+              <div class="card__element">
+                <label for="value">
+                  <h3 class="card__sub--heading">
+                    Batch
+                  </h3>
+                </label>
+                <input type="text" class="card__input" name="value" id="value" autocomplete="off" required>
+              </div>
+              <div class="card__elements">
+                <label for="key">
+                  <h3 class="card__sub--heading">
+                    Key
+                  </h3>
+                </label>
+                <input type="text" class="card__input" name="key" id="key" autocomplete="off" required>
+              </div>
+              <div class="card__algo">
+                <div for="card__algo--main">
+                  <h3 class="card__sub--heading">
+                    Algorithm
+                  </h3>
+                </div>
+                <div class="card__algo--inputs">
+                  <div class="inputs">
+                    <input type="radio" name="batch" class="card__algo--radio radio" id="aesBatch" checked>
+                    <!-- <span class="algo__radio--span">
+                </span> -->
+                    <label for="aesBatch" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      AES
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="batch" class="card__algo--radio radio" id="blowfishBatch">
+                    <!-- <span class="algo__radio--span">
+                </span> -->
+                    <label for="blowfishBatch" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      Blowfish
+                    </label>
+                  </div>
+
+                  <div class="inputs">
+                    <input type="radio" name="batch" class="card__algo--radio radio" id="desBatch">
+                    <!-- <span class="algo__radio--span">
+                </span> -->
+                    <label for="desBatch" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      DES
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="batch" class="card__algo--radio radio" id="desedeBatch">
+                    <!-- <span class="algo__radio--span">
+                </span> -->
+                    <label for="desedeBatch" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      DESede
+                    </label>
+                  </div>
+                  <div class="inputs">
+                    <input type="radio" name="batch" class="card__algo--radio radio" id="rc2Batch">
+                    <!-- <span class="algo__radio--span">
+                </span> -->
+                    <label for="rc2Batch" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      RC2
+                    </label>
+                  </div>
+
+                  <div class="inputs">
+                    <input type="radio" name="batch" class="card__algo--radio radio" id="rcaBatch">
+                    <!-- <span class="algo__radio--span">
+                </span> -->
+                    <label for="rcaBatch" class="card__algo-radio--label radio__label">
+                      <span class="card__algo--label radio__inputs">
+
+                      </span>
+                      RCA
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="card__mode">
+                <div for="card__mode--main">
+                  <h3 class="card__sub--heading">
+                    Mode
+                  </h3>
+                </div>
+                <div class="card__mode--inputs">
+                  <div class="mode__inputs">
+                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="cbcBatch" checked>
+                    <label for="cbcBatch" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      CBC
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="cfbBatch">
+                    <label for="cfbBatch" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      CFB
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="ecbBatch">
+                    <label for="ecbBatch" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      ECB
+                    </label>
+                  </div>
+                  <div class="mode__inputs">
+                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="ofbBatch">
+                    <label for="ofbBatch" class="card__mode-radio--label radio__label">
+                      <span class="mode__span radio__inputs">
+
+                      </span>
+                      OFB
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+              <div class="btn__main">
+                <div class="card__btn">
+                  <button class="btn btn-animate" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: inherit;
   }
   &::selection {
     color: $color-white;
@@ -13,11 +14,15 @@
 }
 
 body {
-  font-size: 14px;
+  font-size: 10px;
   font-family: "Poppins", sans-serif;
   background-color: $color-bg;
   // height: 120vh;
   scroll-behavior: smooth;
+  margin: 2rem;
+  @include respond(tab-port) {
+    font-size: 7px;
+  }
 }
 
 ::-webkit-scrollbar {

@@ -1,28 +1,59 @@
-.container {
-  // display: flex;
-  // justify-content: center;
+// section {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   align-content: center;
+// }
 
-  @include absPosition;
-  // border: 1px solid $color-white;
-  padding: 2rem;
-  box-shadow: 5px 5px 10px #999, -5px -5px 10px #fff;
-  border-radius: 4px;
-  // height: 80vh;
-  width: 30%;
+.container {
+  // height: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  // @include absPosition;
+
+  margin: 0 auto;
+
+  height: 83vh;
+  max-width: 367px;
+  min-width: 367px;
+
+  @include respond(tab-port) {
+    padding: 1rem;
+    height: 85vh;
+  }
 }
 
 .card {
+  position: relative;
+  box-shadow: 5px 5px 10px #999, -5px -5px 10px #fff;
+  border-radius: 4px;
+  padding: 1.5rem;
+  width: 367px;
+
   // width: 50%;
   &__nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: stretch;
-    justify-content: space-between;
-    align-items: flex-end;
+    // align-content: stretch;
+    justify-content: flex-start;
+    // align-items: flex-end;
   }
 
   &__heading {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 22px;
+    line-height: 37px;
+    text-align: center;
+    padding-bottom: 0.5rem;
+
+    @include respond(tab-port) {
+      font-size: 20px;
+    }
+
     &:focus {
       border-bottom: 3px solid $color-primary;
       opacity: 1;
@@ -30,56 +61,98 @@
 
     &:not(:last-child) {
       padding-right: 2rem;
+      margin-right: 2rem;
+
+      @include respond(tab-port) {
+        padding-right: 1rem;
+        margin-right: 1rem;
+      }
     }
 
     &:last-child {
       place-items: margin-left;
     }
-    padding-bottom: 1.5rem;
 
     &--link {
+      flex-grow: 1;
       text-decoration: none;
       opacity: 0.75;
       transition: all 0.2s;
+      flex: 1;
 
       &:link,
       &:visited {
         color: $color-black;
       }
 
-      &:active,
-      &:hover,
+      &:hover {
+        border-bottom: 2px solid $color-primary-light;
+        opacity: 1;
+        border-radius: 1px;
+        color: $color-primary;
+      }
+      &:active::before,
       &:focus {
         border-bottom: 3px solid $color-primary;
         opacity: 1;
-      }
-      &:active::before {
-        border-bottom: 3px solid $color-primary;
-        opacity: 1;
+        color: $color-primary;
       }
     }
   }
 
+  &__rel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
   &__form {
+    // position: absolute;
   }
 
   &__element {
   }
 
   &__sub--heading {
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 450;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0.8rem 0 0.3rem;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+      line-height: 1.8rem;
+      margin: 0.4rem 0 0.2rem;
+    }
+    &:not(:last-child) {
+      margin: 0.8rem 0 0;
+
+      @include respond(tab-port) {
+        margin: 0.5rem 0 0;
+      }
+    }
+    &:not(:first-child) {
+      margin: 0rem 0 0.3rem;
+    }
   }
 
   &__input {
     font-family: inherit;
     color: inherit;
     padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    // height: 3.5rem;
     border: none;
-    border-bottom: 3px solid transparent;
-    width: 80%;
+    // border-bottom: 3px solid transparent;
+    width: 85%;
     display: block;
     // -webkit-transition: all 0.3s;
     // transition: all 0.3s;
     background-color: $color-primary-light;
+    // background-color: inherit;
+    // box-shadow: inset 2px 2px 5px #fff, inset -2px -2px 5px #999;
     outline: none;
     letter-spacing: normal;
     word-spacing: normal;
@@ -89,6 +162,12 @@
     cursor: text;
     color: $color-white;
     border-radius: 5px;
+
+    // color: $color-primary;
+
+    &::placeholder {
+      font-size: 1.2rem;
+    }
   }
 
   &__elements {
@@ -134,16 +213,21 @@
       display: none;
     }
   }
+}
 
-  &__btn {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: inherit;
-    display: inline-block;
-    align-items: center;
-    box-shadow: 5px 5px 10px rgba(#fff, 0.6);
-  }
+.nav__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__items {
+  list-style-type: none;
+  display: inline-block;
+}
+.heading2 {
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 // .focus {
@@ -156,33 +240,9 @@
 //   opacity: 0.7;
 // }
 
-.btn {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // width: 287px;
-  // height: 69px;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1rem;
-  outline: none;
-  border: none;
-  background-color: $color-primary;
-  color: $color-white;
-
-  // line-height: 30px;
-  // display: flex;
-  // align-items: center;
-  // text-align: center;
-}
-
 .inputs {
   width: 50%;
+  margin-bottom: 0.2rem;
 }
 
 .mode__inputs {
@@ -198,8 +258,8 @@
   display: inline-block;
   position: relative;
   // position: absolute;
-  left: -2px;
-  top: 0px;
+  left: -0px;
+  top: 3px;
 
   &::after {
     content: "";
@@ -213,13 +273,46 @@
     transform: translate(-50%, -50%);
     background-color: $color-primary;
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity 0.3s;
   }
-  // &__radio-input:checked ~ &__radio-label &__radio-button::after {
-  //   opacity: 1;
-  // }
 }
 
 .radio:checked ~ .radio__label .radio__inputs::after {
   opacity: 1;
 }
+
+.radio__label {
+  font-size: 0.8rem;
+}
+
+// .active {
+//   border-bottom: 3px solid $color-primary;
+//   opacity: 1;
+//   color: $color-primary;
+//   visibility: visible;
+//   opacity: 1;
+//   display: initial;
+// }
+
+.nav_radio {
+  display: none;
+}
+
+.radio:checked + .nav__label {
+  // color: $color-primary;
+  // // border-bottom: 3px solid $color-primary;
+  // border-bottom: 3px solid $color-primary;
+  // opacity: 1;
+  // color: $color-primary;
+  border-bottom: 3px solid $color-primary;
+  opacity: 1;
+  color: $color-primary;
+}
+
+// .nav__label {
+//   color: $color-primary;
+//   // border-bottom: 3px solid $color-primary;
+//   border-bottom: 3px solid $color-primary;
+//   opacity: 1;
+//   color: $color-primary;
+// }

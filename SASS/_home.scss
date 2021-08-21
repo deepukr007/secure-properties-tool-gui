@@ -17,11 +17,13 @@ body {
   font-size: 10px;
   font-family: "Poppins", sans-serif;
   background-color: $color-bg;
-  // height: 120vh;
   scroll-behavior: smooth;
   margin: 2rem;
   @include respond(tab-port) {
     font-size: 7px;
+  }
+  @include respond(phone) {
+    font-size: 6px;
   }
 }
 

@@ -3,14 +3,13 @@
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
-  height: 83vh;
   max-width: 367px;
   min-width: 367px;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .container {
     padding: 1rem;
-    height: 85vh;
+    padding-right: 2rem;
   }
 }
 
@@ -21,11 +20,10 @@
   padding: 1.5rem;
   width: 367px;
 }
-.card__nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
+@media only screen and (max-width: 37.5em) {
+  .card {
+    padding: 1rem;
+  }
 }
 .card__heading {
   font-style: normal;
@@ -44,6 +42,10 @@
   border-bottom: 3px solid #892cdc;
   opacity: 1;
 }
+.card__heading:not(:last-child) {
+  padding-right: 2rem;
+  margin-right: 2rem;
+}
 @media only screen and (max-width: 56.25em) {
   .card__heading:not(:last-child) {
     padding-right: 1rem;
@@ -60,8 +62,7 @@
   transition: all 0.2s;
   flex: 1;
 }
-.card__heading--link:link,
-.card__heading--link:visited {
+.card__heading--link:link, .card__heading--link:visited {
   color: #000;
 }
 .card__heading--link:hover {
@@ -70,8 +71,7 @@
   border-radius: 1px;
   color: #892cdc;
 }
-.card__heading--link:active::before,
-.card__heading--link:focus {
+.card__heading--link:active::before, .card__heading--link:focus {
   border-bottom: 3px solid #892cdc;
   opacity: 1;
   color: #892cdc;
@@ -126,6 +126,11 @@
   color: #fff;
   border-radius: 5px;
 }
+@media only screen and (max-width: 56.25em) {
+  .card__input {
+    width: 90%;
+  }
+}
 .card__input::-moz-placeholder {
   font-size: 1.2rem;
 }
@@ -161,17 +166,17 @@
 .nav__item {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .nav__items {
   list-style-type: none;
   display: inline-block;
+  align-self: flex-start;
 }
 
 .heading2 {
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-self: flex-start;
 }
 
 .inputs {
@@ -227,9 +232,7 @@
   color: #892cdc;
 }
 
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -254,6 +257,11 @@ body {
 @media only screen and (max-width: 56.25em) {
   body {
     font-size: 7px;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  body {
+    font-size: 6px;
   }
 }
 
@@ -300,18 +308,6 @@ body {
   display: none;
   opacity: 0;
   visibility: hidden;
-}
-
-.off {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.active {
-  display: initial;
-  visibility: visible;
-  opacity: 1;
 }
 
 .card__file {
@@ -407,4 +403,4 @@ body {
 }
 .btn:active {
   transform: translateY(0px);
-}
+}/*# sourceMappingURL=main.css.map */

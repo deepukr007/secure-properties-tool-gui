@@ -53,17 +53,7 @@
                 </a>
               </h2>
             </li>
-            <li class="nav__items">
-              <h2 class="card__heading">
-                <a href="#" class="card__heading--link heading3">
-                  <input type="radio" name="nav" id="nav__batch" onmouseover="batchClick()" onclick="batchClick()"
-                    class="batch radio">
-                  <label for="nav__batch" class="nav__label string__label">
-                    Batch
-                  </label>
-                </a>
-              </h2>
-            </li>
+
           </ul>
           <!-- <div class="card__nav">
          
@@ -77,7 +67,7 @@
         <!-- String -->
         <div class="card__form card__string" id="string">
           <div class="card__rel">
-            <form action="#" id="form">
+            <form action="#" id="stringForm">
               <div class="card__element">
                 <label for="value">
                   <h3 class="card__sub--heading">
@@ -233,14 +223,14 @@
         <!-- File -->
         <div class="card__form card__file" id="file">
           <div class="card__rel">
-            <form action="#" id="form">
+            <form action="#" id="fileForm">
               <div class="card__element">
                 <label for="value">
                   <h3 class="card__sub--heading">
                     File
                   </h3>
                 </label>
-                <input type="file" class="card__input" name="file" id="file" autocomplete="off" required>
+                <input type="file" class="card__input" name="file" id="File" autocomplete="off" required>
               </div>
               <div class="card__elements">
                 <label for="key">
@@ -389,156 +379,7 @@
 
 
         <!-- Batch -->
-        <div class="card__form card__batch" id="batch">
-          <div class="card__rel">
-            <form action="#" id="form">
-              <div class="card__element">
-                <label for="value">
-                  <h3 class="card__sub--heading">
-                    Batch
-                  </h3>
-                </label>
-                <input type="text" class="card__input" name="value" id="value" autocomplete="off" required>
-              </div>
-              <div class="card__elements">
-                <label for="key">
-                  <h3 class="card__sub--heading">
-                    Key
-                  </h3>
-                </label>
-                <input type="text" class="card__input" name="key" id="key" autocomplete="off" required>
-              </div>
-              <div class="card__algo">
-                <div for="card__algo--main">
-                  <h3 class="card__sub--heading">
-                    Algorithm
-                  </h3>
-                </div>
-                <div class="card__algo--inputs">
-                  <div class="inputs">
-                    <input type="radio" name="batch" class="card__algo--radio radio" id="aesBatch" checked>
-                    <!-- <span class="algo__radio--span">
-                </span> -->
-                    <label for="aesBatch" class="card__algo-radio--label radio__label">
-                      <span class="card__algo--label radio__inputs">
 
-                      </span>
-                      AES
-                    </label>
-                  </div>
-                  <div class="inputs">
-                    <input type="radio" name="batch" class="card__algo--radio radio" id="blowfishBatch">
-                    <!-- <span class="algo__radio--span">
-                </span> -->
-                    <label for="blowfishBatch" class="card__algo-radio--label radio__label">
-                      <span class="card__algo--label radio__inputs">
-
-                      </span>
-                      Blowfish
-                    </label>
-                  </div>
-
-                  <div class="inputs">
-                    <input type="radio" name="batch" class="card__algo--radio radio" id="desBatch">
-                    <!-- <span class="algo__radio--span">
-                </span> -->
-                    <label for="desBatch" class="card__algo-radio--label radio__label">
-                      <span class="card__algo--label radio__inputs">
-
-                      </span>
-                      DES
-                    </label>
-                  </div>
-                  <div class="inputs">
-                    <input type="radio" name="batch" class="card__algo--radio radio" id="desedeBatch">
-                    <!-- <span class="algo__radio--span">
-                </span> -->
-                    <label for="desedeBatch" class="card__algo-radio--label radio__label">
-                      <span class="card__algo--label radio__inputs">
-
-                      </span>
-                      DESede
-                    </label>
-                  </div>
-                  <div class="inputs">
-                    <input type="radio" name="batch" class="card__algo--radio radio" id="rc2Batch">
-                    <!-- <span class="algo__radio--span">
-                </span> -->
-                    <label for="rc2Batch" class="card__algo-radio--label radio__label">
-                      <span class="card__algo--label radio__inputs">
-
-                      </span>
-                      RC2
-                    </label>
-                  </div>
-
-                  <div class="inputs">
-                    <input type="radio" name="batch" class="card__algo--radio radio" id="rcaBatch">
-                    <!-- <span class="algo__radio--span">
-                </span> -->
-                    <label for="rcaBatch" class="card__algo-radio--label radio__label">
-                      <span class="card__algo--label radio__inputs">
-
-                      </span>
-                      RCA
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="card__mode">
-                <div for="card__mode--main">
-                  <h3 class="card__sub--heading">
-                    Mode
-                  </h3>
-                </div>
-                <div class="card__mode--inputs">
-                  <div class="mode__inputs">
-                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="cbcBatch" checked>
-                    <label for="cbcBatch" class="card__mode-radio--label radio__label">
-                      <span class="mode__span radio__inputs">
-
-                      </span>
-                      CBC
-                    </label>
-                  </div>
-                  <div class="mode__inputs">
-                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="cfbBatch">
-                    <label for="cfbBatch" class="card__mode-radio--label radio__label">
-                      <span class="mode__span radio__inputs">
-
-                      </span>
-                      CFB
-                    </label>
-                  </div>
-                  <div class="mode__inputs">
-                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="ecbBatch">
-                    <label for="ecbBatch" class="card__mode-radio--label radio__label">
-                      <span class="mode__span radio__inputs">
-
-                      </span>
-                      ECB
-                    </label>
-                  </div>
-                  <div class="mode__inputs">
-                    <input type="radio" name="modeBatch" class="card__mode--radio radio" id="ofbBatch">
-                    <label for="ofbBatch" class="card__mode-radio--label radio__label">
-                      <span class="mode__span radio__inputs">
-
-                      </span>
-                      OFB
-                    </label>
-                  </div>
-                </div>
-
-              </div>
-              <div class="btn__main">
-                <div class="card__btn">
-                  <button class="btn btn-animate" type="submit">SUBMIT</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
 
 

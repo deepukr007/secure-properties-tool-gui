@@ -30,26 +30,7 @@
   display: initial;
 }
 .card__string-off {
-  // position: absolute;
   display: none;
   opacity: 0;
   visibility: hidden;
-}
-
-// #string {
-//   display: none;
-//   visibility: hidden;
-//   opacity: 0;
-// }
-
-.off {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.active {
-  display: initial;
-  visibility: visible;
-  opacity: 1;
 }

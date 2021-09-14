@@ -403,4 +403,66 @@ body {
 }
 .btn:active {
   transform: translateY(0px);
+}
+
+.output {
+  display: none;
+  visibility: hidden;
+}
+
+.output__on {
+  display: block;
+  visibility: visible;
+  width: auto;
+  margin-top: 0.7rem;
+}
+
+.card__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.h-output {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.copy__icon {
+  font-size: 1.5rem;
+  background: none;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+.copy__icon:hover {
+  color: #892cdc;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+.copy__icon:active {
+  transform: scale(1);
+  color: #892cdc;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+.output__string {
+  font-size: 1rem;
+}
+
+.output__string-on {
+  font-size: 1rem;
+  background-color: #892cdc;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

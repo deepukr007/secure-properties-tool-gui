@@ -18,6 +18,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <!-- Fonts Awesome  -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
 
 </head>
 
@@ -31,8 +34,7 @@
             <li class="nav__items">
               <h2 class="card__heading">
                 <a href="#" class="card__heading--link heading1">
-                  <input type="radio" name="nav" id="nav__string" onmouseover="stringClick()" onclick="stringClick()"
-                    class="string radio" checked>
+                  <input type="radio" name="nav" id="nav__string" onclick="stringClick()" class="string radio" checked>
                   <label for="nav__string" class="nav__label string__label">
                     String
                   </label>
@@ -44,8 +46,7 @@
             <li class="nav__items">
               <h2 class="card__heading">
                 <a href="#" class="card__heading--link heading2">
-                  <input type="radio" name="nav" id="nav__label" onmouseover="fileClick()" onclick="fileClick()"
-                    class="file radio">
+                  <input type="radio" name="nav" id="nav__label" onclick="fileClick()" class="file radio">
                   <label for="nav__label" class="nav__label string__label">
                     File
                   </label>
@@ -209,7 +210,7 @@
               </div>
               <div class="btn__main">
                 <div class="card__btn">
-                  <button class="btn btn-animate" type="submit">SUBMIT</button>
+                  <button class="btn btn-animate" type="submit" onclick="submitClick()">SUBMIT</button>
                 </div>
               </div>
             </form>
@@ -378,13 +379,28 @@
 
 
 
-        <!-- Batch -->
 
       </div>
 
 
 
 
+
+    </div>
+    <div class="output" id="output">
+      <div class="container">
+        <div class="card">
+          <div class="card__top">
+            <h2 class="h-output">
+              Output:
+            </h2>
+            <span class="copy" onclick="copyText()"><i class="far fa-copy copy__icon"></i></span>
+          </div>
+          <p class="output__string" id="outputString">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, cupiditate.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 

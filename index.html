@@ -32,6 +32,8 @@
 
 <body>
 
+
+
   <section>
     <div class="container">
       <div class="card">
@@ -64,7 +66,7 @@
         <div class="dropmenu">
           <label class="options" for="option">Operation:</label>
 
-          <select name="options" id="option">
+          <select name="options" tabindex="1" id="option">
             <option value="encrypt">Encrypt</option>
             <option value="decrypt">Decrypt</option>
 
@@ -83,7 +85,7 @@
                     Value
                   </h3>
                 </label>
-                <input type="text" class="card__input" name="value" id="value" autocomplete="off" required>
+                <input type="text" tabindex="2" class="card__input" name="value" id="value" autocomplete="off" required>
               </div>
               <div class="card__elements">
                 <label for="key">
@@ -91,7 +93,7 @@
                     Key
                   </h3>
                 </label>
-                <input type="text" class="card__input" name="key" id="key" autocomplete="off" required>
+                <input type="text" tabindex="3" class="card__input" name="key" id="key" autocomplete="off" required>
               </div>
               <div class="card__algo">
                 <div for="card__algo--main">
@@ -195,7 +197,7 @@
               </div>
               <div class="btn__main">
                 <div class="card__btn">
-                  <button class="btn btn-animate" type="submit">SUBMIT</button>
+                  <button tabindex="4" class="btn btn-animate" type="submit">SUBMIT</button>
                 </div>
               </div>
             </form>
@@ -214,7 +216,7 @@
                     File
                   </h3>
                 </label>
-                <input type="file" class="card__input" name="file" id="File" autocomplete="off" required>
+                <input type="file" tabindex="2" class="card__input" name="file" id="File" autocomplete="off" required>
               </div>
               <div class="card__elements">
                 <label for="key">
@@ -222,7 +224,7 @@
                     Key
                   </h3>
                 </label>
-                <input type="text" class="card__input" name="key" id="keyFile" autocomplete="off" required>
+                <input type="text" tabindex="3" class="card__input" name="key" id="keyFile" autocomplete="off" required>
               </div>
               <div class="card__algo">
                 <div for="card__algo--main">
@@ -325,7 +327,7 @@
               </div>
               <div class="btn__main">
                 <div class="card__btn">
-                  <button id="submit" class="btn btn-animate" type="submit">SUBMIT</button>
+                  <button id="submit" tabindex="4" class="btn btn-animate" type="submit">SUBMIT</button>
                 </div>
               </div>
             </form>

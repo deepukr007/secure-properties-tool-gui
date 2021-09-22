@@ -27,11 +27,11 @@ $(document).ready(function () {
     var OptionValue = $("#option :selected").val();
     var Encrypt, Decrypt;
 
-    console.log(OptionValue);
-    console.log(string);
-    console.log(key);
-    console.log(algo);
-    console.log(mode);
+    // console.log(OptionValue);
+    // console.log(string);
+    // console.log(key);
+    // console.log(algo);
+    // console.log(mode);
 
 
     var url = "localhost:5000/" + OptionValue;

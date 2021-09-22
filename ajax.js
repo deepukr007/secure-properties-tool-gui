@@ -25,6 +25,7 @@ $(document).ready(function () {
     var algo = $("input[name='stringAlgo']:checked").val();
     var mode = $("input[name='stringMode']:checked").val();
     var OptionValue = $("#option :selected").val();
+    var Encrypt, Decrypt;
 
     console.log(OptionValue);
     console.log(string);
@@ -35,7 +36,7 @@ $(document).ready(function () {
 
     var url = "localhost:5000/" + OptionValue;
     console.log(url);
-    $.get("url",
+    $.post("url",
       {
         string,
         key,
@@ -52,27 +53,27 @@ $(document).ready(function () {
 
 
   })
-  $("#fileForm").submit(function (event) {
+  // $("#fileForm").submit(function (event) {
 
-    var OptionValue = $("#option :selected").val();
-    var fileName = $("#File").val();
-    var fileKey = $("#keyFile").val();
-    var algo = $("input[name='file']:checked").val();
-    var mode = $("input[name='fileMode']:checked").val();
+  //   var OptionValue = $("#option :selected").val();
+  //   var fileName = $("#File").val();
+  //   var fileKey = $("#keyFile").val();
+  //   var algo = $("input[name='file']:checked").val();
+  //   var mode = $("input[name='fileMode']:checked").val();
 
-    console.log(OptionValue);
-    console.log(fileName);
-    console.log(fileKey);
-    console.log(algo);
-    console.log(mode);
-
-
-
-    $("#output").addClass("output__on");
-    event.preventDefault();
+  //   console.log(OptionValue);
+  //   console.log(fileName);
+  //   console.log(fileKey);
+  //   console.log(algo);
+  //   console.log(mode);
 
 
-  })
+
+  //   $("#output").addClass("output__on");
+  //   event.preventDefault();
+
+
+  // })
 
 
 

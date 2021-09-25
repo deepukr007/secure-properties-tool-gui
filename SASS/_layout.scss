@@ -243,3 +243,7 @@
   opacity: 1;
   color: $color-primary;
 }
+
+.radio:checked + .radio__label {
+  color: $color-primary;
+}

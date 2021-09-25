@@ -7,10 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="HTML CSS SCSS">
   <title>Design</title>
-  <!-- Bootstrap 5  -->
-
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
 
   <!-- Style CSS -->
   <link rel="stylesheet" href="./SASS/main.css">
@@ -21,11 +17,23 @@
   <!-- Fonts Awesome  -->
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
+  <!-- JQuery  -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+  <script src="./ajax.js"></script>
+
+
+  <!-- JavaScript -->
+  <script src="./script.js"></script>
 
 </head>
 
 <body>
-  <script src="./script.js"></script>
+
+
+
   <section>
     <div class="container">
       <div class="card">
@@ -39,8 +47,6 @@
                     String
                   </label>
                 </a>
-
-
               </h2>
             </li>
             <li class="nav__items">
@@ -50,32 +56,36 @@
                   <label for="nav__label" class="nav__label string__label">
                     File
                   </label>
-
                 </a>
               </h2>
             </li>
-
           </ul>
-          <!-- <div class="card__nav">
-         
-          
-          
-        </div> -->
         </nav>
+
+
+        <div class="dropmenu">
+          <label class="options" for="option">Operation:</label>
+
+          <select name="options" tabindex="1" id="option">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+
+          </select>
+        </div>
 
 
 
         <!-- String -->
         <div class="card__form card__string" id="string">
           <div class="card__rel">
-            <form action="#" id="stringForm">
+            <form action="" id="stringForm">
               <div class="card__element">
                 <label for="value">
                   <h3 class="card__sub--heading">
                     Value
                   </h3>
                 </label>
-                <input type="text" class="card__input" name="value" id="value" autocomplete="off" required>
+                <input type="text" tabindex="2" class="card__input" name="value" id="value" autocomplete="off" required>
               </div>
               <div class="card__elements">
                 <label for="key">
@@ -83,7 +93,7 @@
                     Key
                   </h3>
                 </label>
-                <input type="text" class="card__input" name="key" id="key" autocomplete="off" required>
+                <input type="text" tabindex="3" class="card__input" name="key" id="key" autocomplete="off" required>
               </div>
               <div class="card__algo">
                 <div for="card__algo--main">
@@ -93,54 +103,40 @@
                 </div>
                 <div class="card__algo--inputs">
                   <div class="inputs">
-                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="aes" checked>
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" name="stringAlgo" value="AES" class="card__algo--radio radio" id="aes" checked>
                     <label for="aes" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       AES
                     </label>
                   </div>
                   <div class="inputs">
-                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="blowfish">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="blowfish" name="stringAlgo" class="card__algo--radio radio"
+                      id="blowfish">
                     <label for="blowfish" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       Blowfish
                     </label>
                   </div>
-
                   <div class="inputs">
-                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="des">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="DES" name="stringAlgo" class="card__algo--radio radio" id="des">
                     <label for="des" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       DES
                     </label>
                   </div>
                   <div class="inputs">
-                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="desede">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="DESede" name="stringAlgo" class="card__algo--radio radio" id="desede">
                     <label for="desede" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       DESede
                     </label>
                   </div>
                   <div class="inputs">
-                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="rc2">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="RC2" name="stringAlgo" class="card__algo--radio radio" id="rc2">
                     <label for="rc2" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
 
@@ -148,14 +144,10 @@
                       RC2
                     </label>
                   </div>
-
                   <div class="inputs">
-                    <input type="radio" name="stringAlgo" class="card__algo--radio radio" id="rca">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="RCA" name="stringAlgo" class="card__algo--radio radio" id="rca">
                     <label for="rca" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       RCA
                     </label>
@@ -170,54 +162,47 @@
                 </div>
                 <div class="card__mode--inputs">
                   <div class="mode__inputs">
-                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="cbc" checked>
+                    <input type="radio" value="CBC" name="stringMode" class="card__mode--radio radio" id="cbc" checked>
                     <label for="cbc" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       CBC
                     </label>
                   </div>
                   <div class="mode__inputs">
-                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="cfb">
+                    <input type="radio" value="CFB" name="stringMode" class="card__mode--radio radio" id="cfb">
                     <label for="cfb" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       CFB
                     </label>
                   </div>
                   <div class="mode__inputs">
-                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="ecb">
+                    <input type="radio" value="ECB" name="stringMode" class="card__mode--radio radio" id="ecb">
                     <label for="ecb" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       ECB
                     </label>
                   </div>
                   <div class="mode__inputs">
-                    <input type="radio" name="stringMode" class="card__mode--radio radio" id="ofb">
+                    <input type="radio" value="OFB" name="stringMode" class="card__mode--radio radio" id="ofb">
                     <label for="ofb" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       OFB
                     </label>
                   </div>
                 </div>
-
               </div>
               <div class="btn__main">
                 <div class="card__btn">
-                  <button class="btn btn-animate" type="submit" onclick="submitClick()">SUBMIT</button>
+                  <button tabindex="4" class="btn btn-animate" type="submit">SUBMIT</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
-
-
 
 
 
@@ -231,7 +216,7 @@
                     File
                   </h3>
                 </label>
-                <input type="file" class="card__input" name="file" id="File" autocomplete="off" required>
+                <input type="file" tabindex="2" class="card__input" name="file" id="File" autocomplete="off" required>
               </div>
               <div class="card__elements">
                 <label for="key">
@@ -239,7 +224,7 @@
                     Key
                   </h3>
                 </label>
-                <input type="text" class="card__input" name="key" id="keyFile" autocomplete="off" required>
+                <input type="text" tabindex="3" class="card__input" name="key" id="keyFile" autocomplete="off" required>
               </div>
               <div class="card__algo">
                 <div for="card__algo--main">
@@ -249,69 +234,49 @@
                 </div>
                 <div class="card__algo--inputs">
                   <div class="inputs">
-                    <input type="radio" name="file" class="card__algo--radio radio" id="aesFile" checked>
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="AES" name="file" class="card__algo--radio radio" id="aesFile" checked>
                     <label for="aesFile" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       AES
                     </label>
                   </div>
                   <div class="inputs">
-                    <input type="radio" name="file" class="card__algo--radio radio" id="blowfishFile">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="Blowfish" name="file" class="card__algo--radio radio" id="blowfishFile">
                     <label for="blowfishFile" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       Blowfish
                     </label>
                   </div>
-
                   <div class="inputs">
-                    <input type="radio" name="file" class="card__algo--radio radio" id="desFile">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="DES" name="file" class="card__algo--radio radio" id="desFile">
                     <label for="desFile" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       DES
                     </label>
                   </div>
                   <div class="inputs">
-                    <input type="radio" name="file" class="card__algo--radio radio" id="desedeFile">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="DESede" name="file" class="card__algo--radio radio" id="desedeFile">
                     <label for="desedeFile" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       DESede
                     </label>
                   </div>
                   <div class="inputs">
-                    <input type="radio" name="file" class="card__algo--radio radio" id="rc2File">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="RC2" name="file" class="card__algo--radio radio" id="rc2File">
                     <label for="rc2File" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       RC2
                     </label>
                   </div>
-
                   <div class="inputs">
-                    <input type="radio" name="file" class="card__algo--radio radio" id="rcaFile">
-                    <!-- <span class="algo__radio--span">
-              </span> -->
+                    <input type="radio" value="RCA" name="file" class="card__algo--radio radio" id="rcaFile">
                     <label for="rcaFile" class="card__algo-radio--label radio__label">
                       <span class="card__algo--label radio__inputs">
-
                       </span>
                       RCA
                     </label>
@@ -326,66 +291,49 @@
                 </div>
                 <div class="card__mode--inputs">
                   <div class="mode__inputs">
-                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="cbcFile" checked>
+                    <input type="radio" value="CBC" name="fileMode" class="card__mode--radio radio" id="cbcFile"
+                      checked>
                     <label for="cbcFile" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       CBC
                     </label>
                   </div>
                   <div class="mode__inputs">
-                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="cfbFile">
+                    <input type="radio" value="CFB" name="fileMode" class="card__mode--radio radio" id="cfbFile">
                     <label for="cfbFile" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       CFB
                     </label>
                   </div>
                   <div class="mode__inputs">
-                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="ecbFile">
+                    <input type="radio" value="ECB" name="fileMode" class="card__mode--radio radio" id="ecbFile">
                     <label for="ecbFile" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       ECB
                     </label>
                   </div>
                   <div class="mode__inputs">
-                    <input type="radio" name="fileMode" class="card__mode--radio radio" id="ofbFile">
+                    <input type="radio" value="OFB" name="fileMode" class="card__mode--radio radio" id="ofbFile">
                     <label for="ofbFile" class="card__mode-radio--label radio__label">
                       <span class="mode__span radio__inputs">
-
                       </span>
                       OFB
                     </label>
                   </div>
                 </div>
-
               </div>
               <div class="btn__main">
                 <div class="card__btn">
-                  <button class="btn btn-animate" type="submit">SUBMIT</button>
+                  <button id="submit" tabindex="4" class="btn btn-animate" type="submit">SUBMIT</button>
                 </div>
               </div>
             </form>
           </div>
-
         </div>
-
-
-
-
-
-
-
       </div>
-
-
-
-
-
     </div>
     <div class="output" id="output">
       <div class="container">
@@ -394,11 +342,9 @@
             <h2 class="h-output">
               Output:
             </h2>
-            <span class="copy" onclick="copyText()"><i class="far fa-copy copy__icon"></i></span>
-          </div>
-          <p class="output__string" id="outputString">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, cupiditate.
-          </p>
+            <span class="copy" onclick="copyText()"><i id="copy" class="far fa-copy copy__icon"></i></span>
+          </div id="Output">
+          <p class="output__string" id="outputString"></p>
         </div>
       </div>
     </div>

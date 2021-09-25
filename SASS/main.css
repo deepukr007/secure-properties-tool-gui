@@ -1,3 +1,38 @@
+.dropmenu {
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.options {
+  padding-right: 1rem;
+}
+
+option {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+select {
+  width: 35%;
+  background-color: transparent;
+  border: none;
+  color: #892cdc;
+}
+select:focus, select:active {
+  border: #892cdc;
+  background-color: transparent;
+  background-image: none;
+}
+
+option {
+  background-color: transparent;
+  font-size: inherit;
+}
+
 .container {
   display: flex;
   justify-content: space-around;
@@ -232,6 +267,10 @@
   color: #892cdc;
 }
 
+.radio:checked + .radio__label {
+  color: #892cdc;
+}
+
 *, *::after, *::before {
   padding: 0;
   margin: 0;
@@ -459,10 +498,12 @@ body {
 
 .output__string {
   font-size: 1rem;
+  display: inline-block;
 }
 
 .output__string-on {
   font-size: 1rem;
   background-color: #892cdc;
   color: #fff;
+  display: inline-block;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,36 @@
+.dropmenu {
+  padding-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.options {
+  padding-right: 1rem;
+}
+
+option {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+select {
+  width: 35%;
+  background-color: transparent;
+  border: none;
+  color: $color-primary;
+
+  &:focus,
+  &:active {
+    border: $color-primary;
+    background-color: transparent;
+    // color: red;
+    // width: 100%;
+    background-image: none;
+  }
+}
+option {
+  background-color: transparent;
+  font-size: inherit;
+}

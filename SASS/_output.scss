@@ -26,7 +26,6 @@
 .copy {
 }
 .copy__icon {
-  // color: $color-primary;
   font-size: 1.5rem;
   background: none;
   transition: all 0.2s ease;
@@ -37,7 +36,6 @@
 }
 
 .copy__icon:hover {
-  // background: $color-primary;
   color: $color-primary;
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -56,10 +54,12 @@
 }
 .output__string {
   font-size: 1rem;
+  display: inline-block;
 }
 
 .output__string-on {
   font-size: 1rem;
   background-color: $color-primary;
   color: $color-white;
+  display: inline-block;
 }

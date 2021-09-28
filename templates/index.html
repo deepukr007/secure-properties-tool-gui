@@ -9,7 +9,7 @@
   <title>Design</title>
 
   <!-- Style CSS -->
-  <link rel="stylesheet" href="./SASS/main.css">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/SASS/main.css') }}">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -22,11 +22,11 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 
-  <script src="./ajax.js"></script>
+  <script src="{{ url_for('static',filename='js/ajax.js') }}"></script>
 
 
   <!-- JavaScript -->
-  <script src="./script.js"></script>
+  <script src="{{ url_for('static',filename='js/script.js') }}"></script>
 
 </head>
 

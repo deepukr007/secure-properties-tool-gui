@@ -20,29 +20,22 @@ $(document).ready(function () {
   })
 
   $("#stringForm").submit(function (event) {
-    var string = $("#value").val();
+    var value = $("#value").val();
     var key = $("#key").val();
-    var algo = $("input[name='stringAlgo']:checked").val();
+    var algorithm = $("input[name='stringAlgo']:checked").val();
     var mode = $("input[name='stringMode']:checked").val();
     var OptionValue = $("#option :selected").val();
-    var Encrypt, Decrypt;
-
-    // console.log(OptionValue);
-    // console.log(string);
-    // console.log(key);
-    // console.log(algo);
-    // console.log(mode);
 
 
-    var url = "localhost:5000/" + OptionValue;
+    var url = OptionValue;
     console.log(url);
-    $.post("url",
+    $.post(url,
       {
-        string,
+        value,
         key,
-        algo,
+        algorithm,
         mode
-      },
+      },  
       function (data) {
         console.log(data);
         $('#outputString').text(data.name);

@@ -44,7 +44,7 @@ $(document).ready(function () {
         mode
       },
       function (data) {
-        console.log(data);
+        // console.log(data);
         $('#outputString').text(data.name);
       },
       'json');

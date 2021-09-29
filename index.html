@@ -66,7 +66,7 @@
         <div class="dropmenu">
           <label class="options" for="option">Operation:</label>
 
-          <select name="options" tabindex="1" id="option">
+          <select name="options" tabindex="1" id="option" onclick="optionValue()">
             <option value="encrypt">Encrypt</option>
             <option value="decrypt">Decrypt</option>
 
@@ -197,7 +197,7 @@
               </div>
               <div class="btn__main">
                 <div class="card__btn">
-                  <button tabindex="4" class="btn btn-animate" type="submit">SUBMIT</button>
+                  <button tabindex="4" class="btn btn-animate" id="submit" type="submit">Encrypt</button>
                 </div>
               </div>
             </form>

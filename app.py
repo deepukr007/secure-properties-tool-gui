@@ -18,17 +18,16 @@ def encrypt():
     key = request.form.get('key')
     value = request.form.get('value')
     command = command_init+ " " + "string " + "encrypt" + " " + algorithm + " " + mode +" " + key + " " + str(value)
-    return command
     a = os.popen(command)
     a= a.read()
     encrypted = a.strip('\n')                                                                                                                                     
-    encrypted = '![' + encrypted + ']'                                                                                                                                   
+                              
     return(encrypted)
   
 
 @app.route("/decrypt" , methods=['POST'])
 def decrypt():
-    command_init = "java -cp secure-properties-tool.jar com.mulesoft.tools.SecurePropertiesTool"                                                           
+    command_init = "java -cp " + JAR_PATH +   " com.mulesoft.tools.SecurePropertiesTool"                                                  
     algorithm = request.form.get('algorithm')
     mode = request.form.get('mode')
     key = request.form.get('key')

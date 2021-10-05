@@ -9,7 +9,8 @@
   <title>Design</title>
 
   <!-- Style CSS -->
-  <link rel="stylesheet" href="{{ url_for('static',filename='css/SASS/main.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='../static/css/SASS/') }}">
+  <link rel="stylesheet" href="../static/css/SASS/main.css">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
@@ -23,10 +24,12 @@
 
 
   <script src="{{ url_for('static',filename='js/ajax.js') }}"></script>
+  <script src="../static/js/ajax.js"></script>
 
 
   <!-- JavaScript -->
   <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+  <script src="../static/js/script.js"></script>
 
 </head>
 
@@ -66,7 +69,7 @@
         <div class="dropmenu">
           <label class="options" for="option">Operation:</label>
 
-          <select name="options" tabindex="1" id="option">
+          <select name="options" tabindex="1" id="option" onclick="optionValue()">
             <option value="encrypt">Encrypt</option>
             <option value="decrypt">Decrypt</option>
 
@@ -93,7 +96,8 @@
                     Key
                   </h3>
                 </label>
-                <input type="text" tabindex="3" class="card__input" name="key" id="key" autocomplete="off" required>
+                <input type="text" tabindex="3" class="card__input" name="key" minlength="32" maxlength="32" id="key"
+                  autocomplete="off" required>
               </div>
               <div class="card__algo">
                 <div for="card__algo--main">
@@ -197,7 +201,7 @@
               </div>
               <div class="btn__main">
                 <div class="card__btn">
-                  <button tabindex="4" class="btn btn-animate" type="submit">SUBMIT</button>
+                  <button tabindex="4" class="btn btn-animate" id="submit" type="submit">Encrypt</button>
                 </div>
               </div>
             </form>

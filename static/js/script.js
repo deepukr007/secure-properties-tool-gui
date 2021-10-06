@@ -1,7 +1,8 @@
 `use strict`;
-
-
-
+function optionValue() {
+  var OptionValue = document.querySelector("#option").value;
+  document.querySelector('#submit').textContent = OptionValue;
+}
 
 
 function stringClick() {
@@ -27,3 +28,24 @@ function remove() {
   document.getElementById("outputString").className = "output__string";
 }
 
+
+
+$(document).ready(function () {
+  $(".card__input").focus(function () {
+    $(this).css("box-shadow", "2px 2px 4px #666");
+  })
+  $(".card__input").blur(function () {
+    $(this).css("box-shadow", "none");
+  })
+
+  $(".card__input").blur(function () {
+    var text = $(this).val().length;
+    if (text < 2) {
+      $(this).css("box-shadow", "2px 2px 4px #811");
+    }
+    else {
+      $(this).css("box-shadow", "2px 2px 4px #181");
+    }
+
+  })
+});

@@ -28,19 +28,16 @@ $(document).ready(function () {
 
 
     var url = OptionValue;
-    console.log(url);
     $.post(url,
       {
         value,
         key,
         algorithm,
         mode
-      },  
-      function (data) {
-        console.log(data);
-        $('#outputString').text(data.name);
       },
-      'json');
+      function (data) {
+        $('#outputString').text(data);
+      });
     $("#output").addClass("output__on");
     event.preventDefault();
 

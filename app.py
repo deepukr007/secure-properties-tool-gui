@@ -38,3 +38,7 @@ def decrypt():
     a= a.read()
     decrypted = a.strip('\n')
     return(decrypted)
+
+
+if __name__ == "__main__":
+        app.run()

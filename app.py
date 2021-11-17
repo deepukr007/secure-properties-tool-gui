@@ -9,7 +9,6 @@ JAR_PATH  = os.path.join(APP_PATH,'JAR','secure-properties-tool.jar')
 def home():
    return render_template('index.html')
 
-
 @app.route("/encrypt" , methods=['POST'] )
 def encrypt():
     command_init = "java -cp " + JAR_PATH +   " com.mulesoft.tools.SecurePropertiesTool"     

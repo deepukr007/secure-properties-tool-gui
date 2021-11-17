@@ -3,11 +3,3 @@ GUI tool/utility for secure properties tool which can be used to encrypt or decr
 
 App is deployed in heroku - https://secure-prop-app.herokuapp.com/
 
-
-Steps to set up flask 
-- Install python 3.9 
-- run 'pip install flask' in terminal
-
-
-Steps to tun the flas application,
-- Run app.py 

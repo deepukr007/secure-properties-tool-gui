@@ -1,23 +1,7 @@
 
 
 $(document).ready(function () {
-  $(".card__input").focus(function () {
-    $(this).css("box-shadow", "2px 2px 4px #666");
-  })
-  $(".card__input").blur(function () {
-    $(this).css("box-shadow", "none");
-  })
 
-  $(".card__input").blur(function () {
-    var text = $(this).val().length;
-    if (text < 2) {
-      $(this).css("box-shadow", "2px 2px 4px #811");
-    }
-    else {
-      $(this).css("box-shadow", "2px 2px 4px #181");
-    }
-
-  })
 
   $("#stringForm").submit(function (event) {
     var value = $("#value").val();
@@ -40,8 +24,7 @@ $(document).ready(function () {
       });
     $("#output").addClass("output__on");
     event.preventDefault();
-
-
+    event.stopImmediatePropagation(); //To prevent triggering the function twice
   })
   // $("#fileForm").submit(function (event) {
 

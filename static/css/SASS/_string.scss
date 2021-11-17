@@ -1,0 +1,36 @@
+.heading2:target .card__string {
+  visibility: hidden;
+  opacity: 0;
+}
+#nav__string {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.string:checked {
+  border-bottom: 3px solid $color-primary;
+  opacity: 1;
+}
+
+.card__string {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+}
+.card__string-on {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav_active {
+  visibility: visible;
+  opacity: 1;
+  display: initial;
+}
+.card__string-off {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}

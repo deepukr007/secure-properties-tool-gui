@@ -1,0 +1,41 @@
+.card__btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: inherit;
+  display: inline-block;
+  align-items: center;
+}
+
+.btn__main {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  z-index: 3;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  background-color: $color-primary;
+  color: $color-white;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color-primary-dark;
+    transform: translateY(-3px) scale(1.05);
+  }
+
+  &:active {
+    transform: translateY(0px);
+  }
+}

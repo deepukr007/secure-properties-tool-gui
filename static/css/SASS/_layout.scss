@@ -1,0 +1,249 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 367px;
+  min-width: 367px;
+
+  @include respond(phone) {
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+}
+
+.card {
+  position: relative;
+  box-shadow: 5px 5px 10px #999, -5px -5px 10px #fff;
+  border-radius: 4px;
+  padding: 1.5rem;
+  width: 367px;
+  @include respond(phone) {
+    padding: 1rem;
+  }
+
+  &__heading {
+    font-style: normal;
+    font-weight: 550;
+    font-size: 22px;
+    line-height: 37px;
+    text-align: center;
+    padding-bottom: 0.5rem;
+
+    @include respond(tab-port) {
+      font-size: 20px;
+    }
+
+    &:focus {
+      border-bottom: 3px solid $color-primary;
+      opacity: 1;
+    }
+
+    &:not(:last-child) {
+      padding-right: 2rem;
+      margin-right: 2rem;
+
+      @include respond(tab-port) {
+        padding-right: 1rem;
+        margin-right: 1rem;
+      }
+    }
+
+    &:last-child {
+      place-items: margin-left;
+    }
+
+    &--link {
+      flex-grow: 1;
+      text-decoration: none;
+      opacity: 0.75;
+      transition: all 0.2s;
+      flex: 1;
+
+      &:link,
+      &:visited {
+        color: $color-black;
+      }
+
+      &:hover {
+        border-bottom: 2px solid $color-primary-light;
+        opacity: 1;
+        border-radius: 1px;
+        color: $color-primary;
+      }
+      &:active::before,
+      &:focus {
+        border-bottom: 3px solid $color-primary;
+        opacity: 1;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__rel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__sub--heading {
+    font-style: normal;
+    font-weight: normal;
+    font-weight: 450;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 0.8rem 0 0.3rem;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+      line-height: 1.8rem;
+      margin: 0.4rem 0 0.2rem;
+    }
+    &:not(:last-child) {
+      margin: 0.8rem 0 0;
+
+      @include respond(tab-port) {
+        margin: 0.5rem 0 0;
+      }
+    }
+    &:not(:first-child) {
+      margin: 0rem 0 0.3rem;
+    }
+  }
+
+  &__input {
+    font-family: inherit;
+    color: inherit;
+    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    border: none;
+    width: 85%;
+    display: block;
+    background-color: $color-primary-light;
+    outline: none;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    cursor: text;
+    color: $color-white;
+    border-radius: 5px;
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    &::placeholder {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__elements {
+  }
+
+  &__algo {
+    &--main {
+    }
+
+    &--inputs {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    &--radio {
+      background-color: $color-primary-light;
+      display: none;
+    }
+  }
+
+  &__mode {
+    &--inputs {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    &--radio {
+      display: none;
+    }
+  }
+}
+
+.nav__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__items {
+  list-style-type: none;
+  display: inline-block;
+  align-self: flex-start;
+}
+.heading2 {
+  align-self: flex-start;
+}
+
+.inputs {
+  width: 50%;
+  margin-bottom: 0.2rem;
+}
+
+.mode__inputs {
+  width: 50%;
+  position: relative;
+}
+
+.radio__inputs {
+  height: 1rem;
+  width: 1rem;
+  border: 2px solid $color-primary;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  left: -0px;
+  top: 3px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+.radio:checked ~ .radio__label .radio__inputs::after {
+  opacity: 1;
+}
+
+.radio__label {
+  font-size: 0.8rem;
+}
+
+.nav_radio {
+  display: none;
+}
+
+.radio:checked + .nav__label {
+  border-bottom: 3px solid $color-primary;
+  opacity: 1;
+  color: $color-primary;
+}
+
+.radio:checked + .radio__label {
+  color: $color-primary;
+}

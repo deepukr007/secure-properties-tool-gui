@@ -1,0 +1,33 @@
+* {
+  &,
+  &::after,
+  &::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+  }
+  &::selection {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+}
+
+body {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: $color-bg;
+  scroll-behavior: smooth;
+  margin: 2rem;
+  @include respond(tab-port) {
+    font-size: 7px;
+  }
+  @include respond(phone) {
+    font-size: 6px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: $color-primary-light;
+}

@@ -1,48 +1,111 @@
 .dropmenu {
   position: relative;
   display: flex;
-  padding-top: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
+  height: 2rem;
 }
 .options {
   padding-right: 1rem;
+  position: relative;
 }
 
-option {
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+  min-width: 15ch;
+  max-width: 30ch;
+
+  border: 1px solid #777;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+
+  // Optional styles
+  // remove for transparency
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
 select {
-  outline: 0;
+  background-color: $color-primary-light;
   border: 0;
-  box-shadow: none;
-  flex: 1;
-  padding: 0 1em;
-  color: $color-primary;
-  background-color: transparent;
-  background-image: none;
-  cursor: pointer;
-
+  flex-grow: 1;
+  padding: 0 4rem 0 1rem;
+  appearance: none;
+  grid-template-areas: "select";
+  display: grid;
   &:focus,
   &:active {
-    border: $color-primary;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    border: none;
+    background-image: inherit;
     background-color: transparent;
-    background-image: none;
+    outline: none;
   }
 }
-
 select::-ms-expand {
   display: none;
+  color: $color-white;
+  background-color: $color-primary-light;
+}
+
+.drop {
+  padding: 3rem;
+}
+select * {
+  height: 1rem;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  background-color: transparent;
+}
+.arrow {
+  display: block;
+  background-color: $color-primary;
+  position: absolute;
+  height: 100%;
+  width: 3rem;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.arrow:before,
+.arrow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+}
+
+.arrow::before {
+  border-right: 0.6rem solid transparent;
+  border-top: 0.6rem solid $color-white;
+  border-left: 0.6rem solid transparent;
+}
+
+select:hover + .arrow {
+  background-color: $color-primary-dark;
 }
 option {
-  // appearance: none;
-  box-shadow: none;
-  background-color: transparent;
-  font-size: inherit;
-  margin: 1rem;
+  background-color: $color-bg;
+  color: $color-primary;
 }

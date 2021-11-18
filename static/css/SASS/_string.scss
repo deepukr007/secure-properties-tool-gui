@@ -34,3 +34,9 @@
   opacity: 0;
   visibility: hidden;
 }
+
+label::selection,
+input::selection {
+  background-color: $color-white;
+  color: $color-primary;
+}

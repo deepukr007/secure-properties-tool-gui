@@ -1,11 +1,7 @@
 .dropmenu {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding-top: 0.5rem;
   font-size: 1rem;
   font-weight: 500;
-  height: 2rem;
 }
 
 .options {
@@ -27,19 +23,14 @@ select {
   color: #892cdc;
 }
 select:focus, select:active {
-  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  border: none;
-  background-image: inherit;
+  border: #892cdc;
   background-color: transparent;
-  outline: none;
+  background-image: none;
 }
 
 option {
   background-color: transparent;
   font-size: inherit;
-  background-color: #e5e5e5;
-  color: #892cdc;
 }
 
 .container {
@@ -63,7 +54,6 @@ option {
   border-radius: 4px;
   padding: 1.5rem;
   width: 367px;
-  height: auto;
 }
 @media only screen and (max-width: 37.5em) {
   .card {
@@ -359,18 +349,6 @@ body {
   visibility: hidden;
 }
 
-label::-moz-selection,
-input::-moz-selection {
-  background-color: #fff;
-  color: #892cdc;
-}
-
-label::selection,
-input::selection {
-  background-color: #fff;
-  color: #892cdc;
-}
-
 .card__file {
   position: absolute;
   visibility: hidden;
@@ -474,8 +452,7 @@ input::selection {
 .output__on {
   display: block;
   visibility: visible;
-  width: 100%;
-  height: auto;
+  width: auto;
   margin-top: 0.7rem;
 }
 
@@ -529,10 +506,4 @@ input::selection {
   background-color: #892cdc;
   color: #fff;
   display: inline-block;
-  width: 100%;
-}
-
-#outputString {
-  word-break: break-all;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

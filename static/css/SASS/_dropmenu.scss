@@ -44,34 +44,21 @@ select {
   flex-grow: 1;
   padding: 0 4rem 0 1rem;
   appearance: none;
-  grid-template-areas: "select";
-  display: grid;
   &:focus,
   &:active {
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
     border: none;
     background-image: inherit;
-    background-color: transparent;
+    background-color: $color-bg;
     outline: none;
   }
 }
 select::-ms-expand {
   display: none;
-  color: $color-white;
-  background-color: $color-primary-light;
 }
 
 .drop {
   padding: 3rem;
-}
-select * {
-  height: 1rem;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  background-color: transparent;
 }
 .arrow {
   display: block;

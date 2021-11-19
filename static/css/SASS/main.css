@@ -50,9 +50,6 @@ select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-      grid-template-areas: "select";
-  display: -ms-grid;
-  display: grid;
 }
 
 select:focus, select:active {
@@ -60,28 +57,16 @@ select:focus, select:active {
           box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   border: none;
   background-image: inherit;
-  background-color: transparent;
+  background-color: #e5e5e5;
   outline: none;
 }
 
 select::-ms-expand {
   display: none;
-  color: #fff;
-  background-color: rgba(138, 44, 220, 0.6);
 }
 
 .drop {
   padding: 3rem;
-}
-
-select * {
-  height: 1rem;
-  border-radius: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  background-color: transparent;
 }
 
 .arrow {

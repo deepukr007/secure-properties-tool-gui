@@ -19,6 +19,12 @@ $(document).ready(function () {
   })
 });
 
+function optionValue() {
+  var OptionValue = document.querySelector("#option").value;
+  document.querySelector('#submit').textContent = OptionValue;
+}
+
+
 
 `use strict`;
 function optionValue() {
